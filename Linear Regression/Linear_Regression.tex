@@ -1,0 +1,283 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+%\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\usepackage{iftex}
+%\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\usepackage{bm}
+%\geometry{verbose,tmargin=2cm,bmargin=3cm,lmargin=1.8cm,rmargin=1.5cm,headheight=2cm,headsep=2cm,footskip=3cm}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\usepackage{graphicx}
+%\usepackage{setspace}
+%\usepackage{parskip}
+
+\def \hsp {\hspace{3mm}}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+
+
+\makeatother
+\ifxetex
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+%\setmainfont[ Path = fonts/]{Sanskrit_2003.ttf}
+\newfontfamily\nakulafont[Script=Devanagari,AutoFakeBold=2,Path = fonts/]{Nakula}
+%\newfontfamily\liberationfont{Liberation Sans Narrow}
+%\newfontfamily\liberationsansfont{Liberation Sans}
+\fi
+\usepackage{tikz}
+\usepackage{xcolor}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+language=tex,
+frame=single, 
+breaklines=true
+}
+
+%\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+%
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{section}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\vspace{3cm}
+%\usepackage{babel}
+
+
+\begin{document}
+   \title{ Linear Regression }
+   \maketitle
+   \author{ Mannem Charan AI21BTECH11019}
+ \begin{abstract}
+    This report consists of my basic understanding of one of the popular Ml methods "Linear Regression".
+ \end{abstract}
+  \section{Linear Regression}
+   Linear Regression is an old and standard techniques to understand and predict data not only in machine learning but also in statistics.Over the years this method is thoroughly studied and have different flavours of it.
+  \section{What it will do$?$}
+  Basically it is one of the techniques developed to solve a regression problem,i.e,the output that we want to predict is a real number.As the name suggests, linear regression assumes a \textbf{linear relationship} between the input and output parameters.It means that we are sure that $y\brak{output \, variable}$ can be calculated by linear combiantion of input variables$\brak{\mathbf{x}}$.The following is the key equation of linear regression,
+        \begin{align}
+		y &= \vec{w^T}\vec{x} + c \label{eq:1}
+	\end{align}
+	where,$\vec{w}$ is known as weight vector and $c$ is known as bias.
+  \section{What does the equation signifies$?$}
+   To understand that, we will take an example, let say we want to predict height of a child w.r.t the age of the child.
+    \begin{figure}
+     \centering
+     \includegraphics[width=\columnwidth]{linearregression.png}
+     \caption{Height vs Age}
+     \label{Fig:1}
+    \end{figure}
+    In this case, the output variable$\brak{y}$ here is height and the input variable$\brak{x}$ is age.Since we have only one input parameter, the method is known as \textbf{Simple linear Regression}.
+    Now from $\ref{Fig:1}$, we can relate x and y as,
+      \begin{align}
+	      y - 75 &= \frac{90-75}{4-2}\brak{x-2}\\
+	      y &= \frac{25}{2}x + 100
+      \end{align}
+    Here we are able to find a linear relationship between age and height with $w = 7.5$ as coefficient/weight of age and $c = 120cm$ as bias. And with this equation we
+    will generally predict the height using age as a parameter.\\ But not always things are simple,we may have more input variables which can alter the value of $y$ as in here we can take gender also as an parameter.And also we can't say for sure that the input variables and output variable linearly dependent. The task of linear regression is to find a best line for the given data which suits the training data and as well as testing data.By this we can understand that
+    the weights and bias play a major role in predicting the output.
+   \section{The Cost Function}
+    As we discussed earlier that the output that we predict may not match the actual output.In that case, we want modify the weights so that the output that we predict is as close as possible.For that we should minimize the error in predicting the output.In general,for linear regression we will use the below cost function,
+                \begin{align}
+			J &= \frac{1}{2N}\sum_{i=1}^{N}\brak{y_{i}-\brak{w^TX_{i}+c}}^{2}
+		\end{align}
+	where, $N$ are total pairs of $\brak{X_{i},y_{i}}$ and $\vec{w}$ be the weight vector and $c$ is bias.
+  Now the cost function is a function/value that we want minimize in a model.So to minimize this cost function we will follow a standard method known as "Gradient Descent".
+  \section{Gradient Descent}
+   Before going to the gradient descent method, first we will see what actually gradient will do. Let us take a function $f$, the gradient of $f$
+                 \begin{align}
+			 \nabla f =\frac{\partial f}{\partial x}\hat{\imath} + \frac{\partial f}{\partial y}\hat{\jmath} +\frac{\partial f}{\partial k}\hat{z}
+	         \end{align}
+		 will give the direction in which $f$ will increase.\\
+      So we will modify the weights and bias in such a way that it will minimize the cost function, i.e.,
+       \begin{align}
+	       w_{k} &= w_{k} -\alpha \frac{\partial J\brak{w}}{\partial w_{k}} \\
+	       c_{k} &= c_{k} -\alpha \frac{\partial J\brak{c}}{\partial c_{k}}
+       \end{align}
+        where $w_{k}$ and $c_{k}$ be the weight vector and bias after $k^{th}$ iteration and $\alpha$ be the learning rate or explicitly it is distance we want to move the parameter in each iteration in order to minimize the cost function. 
+  \section{Regularization}
+    In this process, we want minimize the mean square error and absolute sum of squares of weights and bias. This practice is carried out to avoid overfitting.As we assumed that there linear dependency between input parameters and the output,in search of best line the model may fail to generalize the unseen data.The new cost function looks like,
+           \begin{align}
+		   J&= \frac{1}{2N}\sum_{i=1}^{N}\brak{y_{i}-\brak{w^TX_{i}+c}}^{2} + \norm{\beta}
+           \end{align}
+	   where $\vec{\beta} = \myvec{\theta \\ w}$
+  \section{Summary}
+  In this report we discussed,
+    \begin{enumerate}
+     \item What is linear Regression?
+     \item How does linear Regression works? 
+     \item Cost function of linear regression	     
+     \item Gradient Descent Method
+     \item Regularization
+     \end{enumerate}
+ \section{Questions:}
+   \begin{enumerate}
+     \item What is the basic assumption made in Linear Regression?
+     \item What is the general cost function used in linear Regression?
+     \item What parameter decides the size of improvement in each step in gradient descent method?
+     \item Why we should do regularisation?
+     \item What are the disadvantages of linear Regression?	
+    \end{enumerate}
+ \section{Solutions:}
+   \begin{enumerate}
+    \item The basic assumption made in linear regression is that there is linear relationship between dependent and independent variables. 
+    \item The cost function used in linear regression is known as,Root Mean Squared Error which is given by
+	     \begin{align}
+		     J &= \frac{1}{2N}\sum_{i=1}^{N}\brak{y_{i}-y_ipred}^{2}
+             \end{align}
+		   where,
+		   \begin{itemize}
+		    \item $N$ total number data samples
+		    \item $y_{i}$ - actual label of $i^{th}$ input vector.
+		    \item $y_{i}pred$ - predicted label of $i^{th}$ input vector
+	           \end{itemize}
+    \item The learning rate$\brak{\alpha}$ decides size of improvement in each step in gradient descent method.
+    \item To avoid overfitting, we should do regulariation. It penalizes the higher magnitude coefficients.
+    \item The disadvantages of linear Regression are
+	    \begin{enumerate}
+	      \item The assumption of linear relationship between dependent and independent variables.
+	      \item Quite sensitive to outliers and causes overfitting
+	    \end{enumerate}
+    \end{enumerate}
+\end{document} 
