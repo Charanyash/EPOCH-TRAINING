@@ -1,0 +1,263 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+%\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+\DeclareMathOperator*{\argmax}{argmax}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+\usepackage{color}                                            %%
+\usepackage{array}                                            %%
+\usepackage{longtable}                                        %%
+\usepackage{calc}                                             %%
+\usepackage{multirow}                                         %%
+\usepackage{hhline}                                           %%
+\usepackage{ifthen}                                           %%
+%optionally (for landscape tables embedded in another document): %%
+\usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\usepackage{iftex}
+%\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\usepackage{bm}
+%\geometry{verbose,tmargin=2cm,bmargin=3cm,lmargin=1.8cm,rmargin=1.5cm,headheight=2cm,headsep=2cm,footskip=3cm}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\usepackage{graphicx}
+%\usepackage{setspace}
+%\usepackage{parskip}
+
+\def \hsp {\hspace{3mm}}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+
+
+\makeatother
+\ifxetex
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+%\setmainfont[ Path = fonts/]{Sanskrit_2003.ttf}
+\newfontfamily\nakulafont[Script=Devanagari,AutoFakeBold=2,Path = fonts/]{Nakula}
+%\newfontfamily\liberationfont{Liberation Sans Narrow}
+%\newfontfamily\liberationsansfont{Liberation Sans}
+\fi
+\usepackage{tikz}
+\usepackage{xcolor}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+	language=tex,
+	frame=single, 
+	breaklines=true
+}
+
+%\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+	\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+%
+%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{section}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+	%\counterwithin{equation}{enumi}
+	%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\let\StandardTheFigure\thefigure
+	\vspace{3cm}
+	%\usepackage{babel}
+	\begin{document}
+	  \title{Naive Bayes}
+	  \author{ Mannem Charan AI21BTECH11019}
+	  \maketitle
+	   \begin{abstract}
+		This report consists of my basic understanding of one of the popular Ml methods "Naive Bayes".
+	   \end{abstract}
+	   \section{Na\"ive Bayes}
+	    Na\"ive Bayes is a supervised learning algorithm which is predominantly used for classification problems. It is simple and most effective method out their to solve classification problems (even\,effective\,for\,multi-class\,classification).It uses probabilistic technique for constructing classifiers.It assumes that the occurence or non- occurence of a particular feature independent of other features.For example,let say we want to claasify a fruit, the normal features that we take are color, size and shape.In Na\"ive Bayes the color of the fruit has nothing to do with size of fruit , similarly shape.It may be unreaslitic for real data but there are array of complex problems which can effectively solved by Na\"ive Bayes.
+	   \section{What is the name Na\"ive Bayes means?}
+            \begin{itemize}
+		    \item \textbf{Na\"ive:}The word Na\"ive comes from it's assumption that the parameters involved in input variable are independent to each other.Even though it is bit na\"ive to assume that,it doesnot do any harm in predicting the classes.Think of it in this way, if features are dependent like outlook of the day and humidity,even though both are correlated,taking both as independent gives us a double-evidence intuitively even though it is bit wrong to do.
+	            \item \textbf{Bayes:} The word Bayes is given since the model is mainly based on Bayes theorem.To understand Bayes theorem, let us take $A$ as hypothesis and $B$ as evidence. Then from Bayes theorem we can say that,
+			    \begin{align}
+				    \pr{A|B} &= \frac{\pr{A}\pr{B|A}}{\pr{B}}
+			    \end{align}
+            \end{itemize}
+	    \section{Understanding Na\"ive Bayes}
+	      With the assumption in the hand, Na\"ive Bayes try to predict the conditional probabilities of each class given the data point.To understand that let us say $X$ is the input variable with features $x_1$,$x_2$,$x_3$,..,$x_k$ and let say $y$ is the target attribute. Now we want to find the probability that $y$ is the label of the data point given the data point $X$,i.e., we want to the conditional probability,
+	      \begin{align}
+		      \pr{y|\vec{X}}
+	      \end{align}
+    Now from Bayes theorem we can write that,
+	      \begin{align}
+		      \pr{y|\vec{X}} &= \frac{\pr{y}\pr{\vec{X}|y}}{\pr{\vec{X}}} 
+              \end{align}
+     Now from our assumption we simplify it as,
+	      \begin{align}
+		                     &= \frac{\pr{y}\pr{x_1|y}\pr{x_2|y}\pr{x_3|y}.\,.\,.\pr{x_k|y}}{\pr{x_1}\pr{x_2}\pr{x_3}\,.\,.\,.\pr{x_k}}\\
+				     &= \frac{1}{Z}\pr{y}\prod_{i=1}^{k}\pr{x_i|y} \label{eq :5}
+	      \end{align}
+	      where $Z = \prod_{i=1}^k\pr{x_i}$, the value of it is constant since it depends on occurence of features in the data.And with equation $\eqref{eq :5}$, we try to predict whether the given input vector is assigned with the label $y$ or not. And if the label like let say color of fruit has more outcomes (red,\,orange,\,blue\,etc) possible,in that case we have to assign a class label $\hat{y}$ to $X$ which has maximum conditional probability, the same thing mathematically can be wriiten as ,
+	      \begin{align}
+                     \hat{y} &= \argmax_y\pr{y}\prod_{i=1}^{k}\pr{x_i|y}
+	      \end{align}
+          Using the above function we will assign class labels to each data point.
+	    \section{Different flavours of Na\"ive Bayes}\label{1}
+	      There are different types Na\"ive Bayes classifiers based on the distributions taken by the predictors/features.
+	       \begin{enumerate}
+		       \item \textbf{Multinomial Na\"ive Bayes:} In this classifier, each $\pr{x_i|y}$ takes multinomial distribution.It is generally used in document classification, like reviewing a text as a email/news article.It takes features/predictors as the words/tokens in the text with frequency in the document as it's values.
+		       \item \textbf{Binomial Na\"ive Bayes:} Here the predictors/features will only take two values(basically \, yes\,or\,no).Since it is similar to binomial distribution it is named as "Binomial Na\"ive Bayes" model.
+		       \item \textbf{Gaussian Na\"ive Bayes:} Often it is possible that the predictors/features take continuous values.So we assume that these values asssociated with each class follow gaussian distribution,i.e.,
+			       \begin{align}
+				       \pr{x_i|y} &= \frac{1}{2\pi\sigma_y^2}\exp{-\frac{\brak{x_i-\nu_y}^2}{2\sigma_y^2}}
+			       \end{align}
+               \end{enumerate}
+	    \section{Advantages of Na\"ive Bayes}
+	     \begin{enumerate}
+	       \item It is one of the fast and easy ML algorithms to predict the class of a dataset
+	       \item It is effective for binary and even multiclass classification.
+	       \item It is predominantly used in Natural Language processing$\brak{NLP}$.
+	     \end{enumerate}
+	    \section{Disadvantages of Na\"ive Bayes}
+	      \begin{enumerate}
+	       \item It is stupid to believe that the features are independent.
+	       \item Not effective for regression problems.
+              \end{enumerate}
+	    \section{Questions}
+	      \begin{enumerate}
+	       \item What is na\"ive about Na\"ive Bayes classifier?
+	       \item What is the main principle behind Na\"ive Bayes classifier?
+	       \item What are the types of Na\"ive Bayes Classifiers?
+	       \item What we will do in training phase of Na\"ive Bayes model?
+               \item Where we commonly use Na\"ive Bayes?
+              \end{enumerate}
+	    \section{Answers}
+	      \begin{enumerate}
+	       \item It is the assumption that the features are independent.As in real life mostly the features are dependent on each other.
+	       \item The main principle used in Na\"ive Bayes is the Bayes theorem.
+	       \item Refer section $\ref{1}$.
+	       \item In training phase, you will collect whatever information you need to calculate $\pr{x_i|y}$ and $\pr{y}$
+	       \item It is commonly used in NLP to give tags to the text.
+	      \end{enumerate}
+        \end{document}
+
+
