@@ -1,0 +1,304 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+%\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{hyperref}
+%\usepackage{stmaryrd}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+\usepackage{color}                                            %%
+\usepackage{array}                                            %%
+\usepackage{longtable}                                        %%
+\usepackage{calc}                                             %%
+\usepackage{multirow}                                         %%
+\usepackage{hhline}                                           %%
+\usepackage{ifthen}                                           %%
+%optionally (for landscape tables embedded in another document): %%
+\usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\usepackage{iftex}
+%\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\usepackage{bm}
+%\geometry{verbose,tmargin=2cm,bmargin=3cm,lmargin=1.8cm,rmargin=1.5cm,headheight=2cm,headsep=2cm,footskip=3cm}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%\usepackage{graphicx}
+%\usepackage{setspace}
+%\usepackage{parskip}
+
+\def \hsp {\hspace{3mm}}
+
+\makeatletter
+
+\providecommand{\tabularnewline}{\\}
+
+
+
+\makeatother
+\ifxetex
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+%\setmainfont[ Path = fonts/]{Sanskrit_2003.ttf}
+\newfontfamily\nakulafont[Script=Devanagari,AutoFakeBold=2,Path = fonts/]{Nakula}
+%\newfontfamily\liberationfont{Liberation Sans Narrow}
+%\newfontfamily\liberationsansfont{Liberation Sans}
+\fi
+\usepackage{tikz}
+\usepackage{xcolor}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+	language=tex,
+	frame=single, 
+	breaklines=true
+}
+
+%\begin{document}
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+	\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+%
+%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\newcommand{\sinc}{\,\text{sinc}\,}
+\newcommand{\rect}{\,\text{rect}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+%\numberwithin{equation}{section}
+\numberwithin{equation}{section}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+%\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+	%\counterwithin{equation}{enumi}
+	%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\let\StandardTheFigure\thefigure
+	\vspace{3cm}
+	%\usepackage{babel}
+	\begin{document}
+		\title{Principal Component Analysis}
+		\author{ Mannem Charan AI21BTECH11019}
+		 \maketitle
+		\begin{abstract}
+			This report consists of my basic understanding of one of the popular feature extraction techniques "Principal Component Analysis".
+		\end{abstract}
+                \section{Principal Component Analysis}
+                  PCA, Principal Component Analysis is an unsupervised learning algorithm used for dimenstionality reduction.It helps in removing the unwanted features in the dataset by using some mathematical methods.It is one of the popular methods in exploratory data analysis and predictive modelling.Here we try to convert correlated features into a set of linearly uncorrelated features.The task of PCA is to find the features/Principal Components which better represents the dataset.
+                \section{Understanding PCA}
+                  In PCA, we try to construct new features\brak{\text{Principal Components}} from the original features and we will retain features which have high variance.Reducing the dimensionality of the model often comes at the accuracy of model, so we will try to remove features which has less effect on accuracy.Basically it includes following steps,
+		  \begin{enumerate}
+		   \item Standardization of the data.
+		   \item Constructing the covariance matrix.
+	           \item Computing Eigen vectors and Eigen values of covariance matrix to produce Principal components.
+		   \item Creating a new feature vector from the principal components.
+	           \item Update the data with new feature vector
+		  \end{enumerate}
+                \subsection{Standardization of the data}
+		  In this step we will try to scale down all the features into the same region so that each attribute contributes equally in the analysis with retaining it's characteristics.So mathematically it is done by subtracting each value in an attribute with the mean of attribute and dividing it with standard deviation of the attribute. 
+		  \begin{align}
+			  x:=  \frac{x - \mu}{\sigma}
+		  \end{align}
+	       After this step all the features will be transformed to same scale.$\brak{\text{Note : After doing standardization, the mean and standard deviation of each feature will become $0$ and $1$}}$
+	        \subsection{Constructing the covariance matrix}
+                  To understand this step, first we will try to understand what is covariance of two variables.Covariance is statistics concept which gives an idea of how two variables are related to each other in the data given. Let say $x$ and $y$ are two random variables $\brak{\text{Attributes in this context}}$,then the covariance will be
+		  \begin{align}
+			  Cov\brak{x,y} &= E\cbrak{\brak{x - \mu_x}\brak{y-\mu_{y}}}
+	          \end{align}
+		  where, \begin{itemize}
+			   \item $E$ is expectation operator
+			   \item $\mu_x$ is mean of random variable $x$.
+			   \item $\mu_y$ is mean of random variable $y$.
+                         \end{itemize}
+	   \begin{enumerate}
+	        \item  When the value of covariance is $0$, it implies that both the variables $x$ and $y$ are independent.
+                \item When the value of covariance is $>0$ , it implies that the variables are positively related means that when x increases y tend to increase.
+		\item And similarly When the value of covariance is $<0$ , it implies that the variables are negatively related means that when x increases y tend to decrease and vice-versa.
+	   \end{enumerate}
+	   So, in this step we will try to construct a covariance matrix $C$, which consists of covariance of every feature pair.It will be an $kXk$ matrix with $k$ as the no. of dimensions and it can be calculated as,
+	      \begin{align}
+		      C &= \frac{X^{T}X}{N}
+              \end{align}
+	      where, $X$ is the input matrix consisting of $k$ columns/features and $N$ rows/data points.
+		\subsection{Computing Eigen Vectors and Eigen values of covariance matrix to produce Principal components}
+		  Now to understand why we need to find eigen vectors of covariance matrix, first we will try to see what actually are Principal Components.\\
+		  \textbf{Principal Components :} Principal Components are explicitly nothing but linear combination of orginal feature set. These are sorted in the sense of how much information they are retaining.These principal components are independent/uncorrelated with each other and meant to have as much as information possible in the early members so that we can neglect the later members.And these new variables doesn't have any real meaning since they are constructed as linear combination of features.\\ 
+  Mathematically speaking, the principal components are the lines in $k$-dimensional space which captures most information of the data and these lines are orthogonal to each other.First we will understand what we mean by \textbf{capturing the information},for that let us take a data point $x_1$ and unit vector $u_1$ .Now if we take inner product of these two $x_1^{T}u_1$, this will be the projection of $x_1$ on $u_1$.And this projection is the measure of how much the vector $u_1$ is capable of capturing information about $x_1$. This will be $0$ if both are orthogonal and maximum when both are collinear.\\
+  So as we are saying that we want capture as much as information as possible, we will maximize the average sum of \textbf{squares} of projections of each data point on this unit vector $u_1$ i.e.,
+	  \begin{align}
+		  \argmax_{u_1^Tu_1 =1} \frac{1}{N}\sum_{i=1}^{N}\brak{x_i^Tu_1}^2
+          \end{align}
+	  Now if we solve the objective function further we will get,
+	   \begin{align}
+		  \frac{1}{N}\sum_{i=1}^{N}\brak{x_i^Tu_1}^2 &= \frac{1}{N}\sum_{i=1}^{N}x_i^Tu_1x_i^Tu_1\\
+		                                             &= \frac{1}{N}\sum_{i=1}^{N}u_1^Tx_ix_i^Tu_1\\
+						             &= u_1^T\frac{1}{N}\sum_{i=1}^{N}x_ix_i^Tu_1\\
+						             &= u_1^TCu_1 
+	   \end{align}
+          Now using lagrange multipliers we will introduce  new variable $\lambda_1$, so the objective function now becomes,
+           \begin{align}
+		   J &=  u_1^TCu_1 - \lambda_1\brak{u_1^Tu_1 - 1}
+           \end{align}
+	  Now the gradient of above objective function will be 
+	   \begin{align}
+		   \delta_{u_1}J = \brak{C + C^T}u_1 - 2\lambda_1u_1\\
+		                 = 2Cu_1 - 2\lambda_1 u_1 = 0\\
+		   \implies Cu_1 = \lambda_1 u_1
+           \end{align}
+         The above equation is satisfied when $u_1$ is Eigen vector of covariance matrix and $\lambda_1$ is Eigen value of the Eigen vector $u_1$.So in other words, we need to find eigen vectors of the covariance matrix.
+	      \subsection{Creating a new feature vector from the principal components}
+	        As we discussed in previous section, the eigen vectors will be the principal components and we will sort the eigen vectors w.r.t eigen values i.e., more the eigen value more will be the information it captures.So we will choose the principal components with more eigen values and this will be the new feature vector.
+             \subsection{Update the data with new feature vector}
+	      In this step we just try to change the data according to the new feature set which we computed using eigen vectors of covariance matrix.So we will try to change the axes of orginal data to principal components.Mathematically the new data set can calculated as,
+	       \begin{align}
+		       X' &= NewFeatureVector^TX^T
+	       \end{align}
+	    \section{Questions}
+	     \begin{enumerate}
+	      \item What are principal components?
+	      \item What covariance signifies?
+	      \item What is the objective function in PCA?
+	      \item What eigen values of principal components represents?
+	      \item What are the applications of PCA?
+             \end{enumerate}
+	    \section{Solutions}
+             \begin{enumerate}
+	      \item Principal components are the linear combination of orginal features and these new features are uncorrelated to each other.
+	      \item The sign of Covariance of two variables gives the information about how the variables are related in the data.
+		      \begin{itemize}
+		        \item If it is positive , both are positively related
+		        \item If it is negative, both are negatively related
+		        \item If it is $0$, then both are independent
+		      \end{itemize}
+	      \item The objective function of PCA is 
+		      \begin{align}
+                        J  &=  u^TCu - \lambda_1\brak{u^Tu - 1}
+                     \end{align}
+                         where, 
+			     \begin{enumerate}
+			        \item $C$ is covariance matrix of input matrix
+			        \item $u$ is the principal component
+			     \end{enumerate}
+	      \item The eigen value represents how much the information is captured by that eigen vector/principal component.Using these eigen values we will sort the eigen vectors.
+	      \item The Applications of PCA are,
+		      \begin{itemize}
+		        \item It is used as a dimensionality reduction technique for various AI applications like computer vision,image compression etc.
+		        \item It can be used to find hidden patterns in the data.Some fields where PCA is used are data mining,Finance,etc.
+		      \end{itemize}
+	      \end{enumerate}
+	  \end{document}
+
+
+
+
+
